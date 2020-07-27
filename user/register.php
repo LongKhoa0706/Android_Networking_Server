@@ -10,8 +10,8 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $password = $_POST['password'];
 $username = $_POST['username'];
-
-$query = "INSERT INTO User VALUES(null,'$email','$username','$phone','$password')";
+$image = $_POST['image'];
+$query = "INSERT INTO User VALUES(null,'$email','$username','$phone','$password','$image')";
 
 if (mysqli_query($connect,$query)){
     echo "Successful";
@@ -21,7 +21,7 @@ if (mysqli_query($connect,$query)){
 
 class User
 {
-    function User($email, $username, $id, $phone,$password)
+    function User($email, $username,$id, $phone,$password)
     {
         $this->email = $email;
         $this->username = $username;

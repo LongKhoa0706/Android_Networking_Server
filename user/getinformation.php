@@ -5,10 +5,12 @@ mysqli_query($connect,"SET NAMES 'utf8'");
 
 $id = $_POST['id'];
 
-$querry = "SELECT * FROM `User` WHERE User.id = '$id'";
+$querry = "SELECT * FROM User WHERE id = '$id'";
 $data = mysqli_query($connect,$querry);
 
 $rows=mysqli_num_rows($data);
+
+$arr = array();
 
 if ($rows> 0){
     while ($getdata = $data ->fetch_assoc()){

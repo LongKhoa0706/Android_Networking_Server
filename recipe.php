@@ -11,8 +11,9 @@ $time = $_POST['time'];
 $difficult = $_POST['difficult'];
 $image = $_POST['image'];
 $score = $_POST['score'];
+$iduser = $_POST['iduser'];
 
-$query = "INSERT INTO recipe VALUES (null ,'$title','$score','$difficult','$time','$image')";
+$query = "INSERT INTO recipe VALUES (null ,'$title','$score','$difficult','$time','$image','$iduser')";
 
 if (mysqli_query($connect,$query)){
     echo 'Thanh cong';
